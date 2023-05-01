@@ -28,10 +28,6 @@
         </div>
     </div>
 
-    <!-- <div id="explore">
-        <h2>explore project</h2>
-    </div> -->
-
         <div id="hero-section" class="one">
             <h1 id="hero-text">
                 Creating <br> <span  class="wordgroup1 space1">designs</span><span  class="wordgroup2 space1">experiences</span><br>
@@ -65,14 +61,14 @@ When I'm not cursing myself over a bug or an ideation block, you can find me vib
         <div class="flex">
             <div class="eudaimonia">
                 <div class="image">
-                    <img onmouseover="exploreCursor(this)" onmouseleave="exploreLeave(this)" src="./images/eudaimonia.png" alt="" onclick="location.href = './eudaimonia.html'">
+                    <img src="./images/eudaimonia.png" alt="" onclick="location.href = './eudaimonia.html'">
                 </div>
                 <h3>Eudaimonia</h3>
                 <h4>UI/UX Design | Front-end Development</h4>
             </div>
             <div class="alliswell">
                 <div class="image">
-                    <img onmouseover="exploreCursor(this)" onmouseleave="exploreLeave(this)" src="./images/alliswell.png" alt="" onclick="location.href = './alliswell.html'">
+                    <img src="./images/alliswell.png" alt="" onclick="location.href = './alliswell.html'">
                 </div>
                 <h3>All is Well</h3>
                 <h4>UI/UX Design</h4>
@@ -82,35 +78,20 @@ When I'm not cursing myself over a bug or an ideation block, you can find me vib
         <div class="flex bottom">
             <div class="tuitionhai">
                 <div class="image">
-                    <img onmouseover="exploreCursor(this)" onmouseleave="exploreLeave(this)" src="./images/tuitionhai.png" alt="" onclick="location.href = './tuitionhai.html'">
+                    <img src="./images/tuitionhai.png" alt="" onclick="location.href = './tuitionhai.html'">
                 </div>
                 <h3>TuitionHai</h3>
                 <h4>UI/UX Design | Front-end Development</h4>
             </div>
             <div class="art">
                 <div class="image">
-                    <img onmouseover="exploreCursor(this)" onmouseleave="exploreLeave(this)" src="./images/art.png" alt="" onclick="location.href = './illustrations.html'">
+                    <img src="./images/art.png" alt="" onclick="location.href = './illustrations.html'">
                 </div>
                 <h3>Illustrations & Sketches</h3>
             </div>
         </div>
     </div>
 
-
-    <!-- <div id="process">
-        <h4>
-            The story <span class="color-change">behind </span>the stories
-        </h4>
-        <p>Research - Ideate - Design - Prototype - Code - Test - Repeat</p>
-
-        <br> <br>
-        <h4>
-            The <span class="color-change">real </span>story behind the stories
-        </h4>
-        <p>Analyse. Research. Notes. Sleep. Ideas. Dumb ideas. Silly ideas. Ideation block. Coffee. No Sleep. Cute annoyed face. Songs and Dogs. Magical Idea. Design. No satissfaction. Discussion. Idea to build on idea.  More Coffee. Code. Tremondous bugs. More Code. Desired look. Satisfaction. Magic. <br>
-            And maybe not even in exact order
-        *cries and laughs*</p>
-    </div> -->
 
     <div class="popup">
         <p>Copied to clipboard! </p> </div>
@@ -119,7 +100,7 @@ When I'm not cursing myself over a bug or an ideation block, you can find me vib
         <div class="contact">
             <p class="contact-text">Have a project idea in mind and would like to share it? Feel free to <span class="italic">email me. </span></p>
 
-            <input type="text" id="copy-text" value="chaithanyachaithanya2708@gmail.com" readonly>
+            <input type="text" id="copy-text" value="chaithanyas.work@gmail.com" readonly>
             <div class="btn-secondary copy" onclick="copyText()">Copy</div>
             <p id="copyright">
                 Designed and Developed by Chaithanya S <br>
@@ -140,29 +121,6 @@ When I'm not cursing myself over a bug or an ideation block, you can find me vib
     </footer>
 
     <script>
-        const explore = document.getElementById('explore')
-        function exploreCursor(e){
-            // document.documentElement.addEventListener("scroll", event => {
-            //     curY = scrollY + 'px'
-            //     setTimeout(() => {
-            //         root.style.setProperty('--exploreY', curY);
-            //     }, 180);
-            // })
-            e.addEventListener("mousemove", evt => {
-            let curX = evt.pageX + 'px';
-            let curY = evt.pageY + 'px';
-            const root = document.documentElement;
-            explore.style.setProperty('display', 'inline-block');
-            setTimeout(() => {
-                root.style.setProperty('--exploreX', curX);
-                root.style.setProperty('--exploreY', curY);
-            }, 180);
-            });
-        }
-
-        function exploreLeave(e){
-            explore.style.setProperty('display', 'none');
-        }
 
         //Copying text to clipboard
         function copyText() {
