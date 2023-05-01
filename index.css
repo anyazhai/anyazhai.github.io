@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+
+html{
+    font-size: 18px;
+}
+
+
+body{
+    --primary-dark: #000000;
+    --accent-brown: #7e500a;
+    --accent-blue: #A700E2;
+}
+
+
+
+*{
+    color: var(--primary-dark);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1, h2, h3{
+    font-weight: 500;
+    letter-spacing: -0.045em;
+}
+
+h2{
+    font-size: 36px;
+}
+
+h4{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 117.5%;
+    letter-spacing: -0.045em;
+    color: rgba(0, 0, 0, 0.53);
+    margin-bottom: 25px;
+}
+
+p{
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 121.5%;
+    letter-spacing: -0.045em;
+    color: rgba(0, 0, 0, 0.71);
+}
+
+img{
+    width: 100%;
+}
+
+video{
+    position: absolute;
+    top: 100px;
+    left: 800px;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 300;
+}
+
+li{
+    padding: 0 20px;
+    list-style-type: none;
+}
+
+.btn-secondary{
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-secondary:hover{
+    background-color: #ffffff1a;
+}
+
+
+#explore{
+    pointer-events: none;
+    position: absolute;
+    background-color: #000000;
+    height: 150px;
+    width: 150px;
+    top: var(--exploreY); 
+    left: var(--exploreX);
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 50px 30px;
+    line-height: 120%;
+    /* transition: all 0.1s ease; */
+    display: none;
+    /* opacity: 0; */
+    text-align: center;
+}
+
+#explore h2{
+    text-align: center;
+    color: #ffffff;
+}
+
+.nav-item{
+    font-weight: 550;
+    transition: all 0.5s ease;
+    color: #23192395;
+    font-size: 1vw;
+}
+
+.nav-contact{
+    position: relative;
+    color: var(--accent-blue);
+    /* font-style: italic; */
+    font-size: 1.4vw;
+    font-weight: 550;
+    transition: all 0.5s ease;
+    padding-right: 20px;
+}
+
+.nav-contact::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: var(--accent-blue);
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.nav-contact:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-item:hover{
+    color: #1e0029;
+}
+
+.container-nav{
+    max-width: 1350px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+
+}
+
+.nav-bar{
+    background-color: #ffffff8c;
+    backdrop-filter: blur(3.5px);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+.nav-bar ul{
+    width: fit-content;
+    justify-content: space-between;
+    display: flex;
+}
+
+.brand{
+    width: 65%;
+    padding-left: 20px;
+}
+
+.brand h2{
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.brand p{
+    font-size: 14px;
+    color: #000000be;
+}
+
+/* Hero Section */
+
+.swiggly{
+    position: absolute;
+    width: 221px;
+    left: 1213px;
+    top: 90px;
+
+}
+
+#hero-section{
+    width: 100vw;
+    display: flex;
+}
+
+#hero-text{
+    max-width: 90vw;
+    font-size: 9vw;
+    font-weight: 500;
+    line-height: 110%;
+    margin-top: 160px;
+    margin-bottom: 40vh;
+    margin-left: 8vw;
+}
+
+.hero-subtext{
+    margin-top: 200px;
+    margin-left: 21vw;
+    width: 240px;
+    font-size: 1vw;
+    color: #00000083;
+}
+
+@keyframes w1anim {
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 1;
+    }
+    50% {
+        opacity:0;
+    }
+}
+
+@keyframes w2anim {
+    50%{
+        opacity: 0;
+    }
+    55%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+.wordgroup1 {
+    opacity:0;
+    position: absolute;
+    width: 95%;
+    padding-left: 17vw;
+    -webkit-animation: w1anim 6s infinite;
+    animation: w1anim 6s infinite;
+}
+
+.wordgroup2{
+    opacity:0;
+    position: absolute;
+    width: 100%;
+    -webkit-animation: w2anim 6s infinite;
+            animation: w2anim 6s infinite;
+}
+
+.space1{
+    margin-left: 32vw;
+    padding-left: 0;
+    line-height: 95%;
+}
+
+.space{
+    margin-left: 14vw;
+}
+
+.stick{
+    font-style: italic;
+}
+
+.color-change{
+    color: var(--accent-blue);
+}
+/* end of hero section */
+
+
+/* About */
+.about{
+    width: 100vw;
+    margin-left: 8vw;
+    display: flex;
+    margin-bottom: 30vh;
+}
+
+#about-text p{
+    max-width: 700px;
+}
+
+#services{
+    margin-top: 200px;
+    margin-left: 10vw;
+    max-width: 30vw;
+}
+
+/*works*/
+
+#works{
+    margin-top: -50px;
+}
+
+#works .flex{
+    display: flex;
+}
+
+#works div h3{
+    margin-left: 30px;
+    font-size: 1.2rem;
+}
+
+#works .image{
+    padding: 0;
+    margin: 0;
+}
+
+#works div h4{
+    margin-left: 30px;
+    font-size: 0.8rem;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.eudaimonia, .alliswell, .tuitionhai, .art{
+    cursor: pointer;
+}
+
+.eudaimonia{
+    max-width: 490.48px;
+    margin-left: 150.54px;
+}
+
+.alliswell{
+    max-width: 507px;
+    margin-left: 15%;
+    margin-top: 300px;
+}
+
+#works .bottom{
+    margin-top: 100px;
+    margin-left: 7%;
+    margin-bottom: 200px
+}
+
+.tuitionhai{
+    width: 591px;
+}
+
+.art{
+    width: 444px;
+    margin-top: 100px;
+    margin-left: 15%;
+}
+
+
+
+
+/*process*/
+#process{
+    margin: 5vw 0;
+    max-width: 600px ;
+    margin-left: 45vw;
+}
+
+
+/*footer*/
+.footer{
+    width: 100vw;
+    height: 500px;
+    background-color: #180021;
+    color: #ffffff;
+    display: flex;
+    overflow-y: hidden;
+}
+
+
+.contact{
+    width: 60vw;
+    padding: 30px;
+    margin-top: 15vh;
+    margin-left: 5vw;
+}
+
+.footer h1, .footer a, .footer p{
+    color: #ffffffcf;
+}
+
+.footer h1{
+    font-size: 5vw;
+}
+
+.contact-text{
+    font-size: 20px;
+    max-width: 20vw;
+}
+
+.italic{
+    color: #fffffff7;
+    font-style: italic;
+    cursor: pointer;
+    transition:0.5s ;
+    position: relative;
+}
+
+.italic::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #fefefe;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.italic:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#copy-text{
+    display: inline-block;
+    margin-top: 30px;
+    resize: none;
+    height: fit-content;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ffffff2f;
+    border: none;
+    width: 410px;
+    color: #ffffff;
+}
+
+#copy-text:focus{
+    outline: none;
+}
+
+.copy{
+    display: inline;
+    margin-top: -10px;
+    width: fit-content;
+}
+
+#copyright{
+    margin-top: 110px;
+    font-size: 14px;
+    color: #ffffff7e;
+}
+
+#toolbar p {
+    margin-top: 10px;
+    width: 20vw;
+    display: inline-block;
+    color: #ffffffa0;
+}
+
+#clear{
+    position: absolute;
+    right: 2vw;
+}
+
+.drawing-board{
+    position: relative;
+}
+
+.drag{
+    position: absolute;
+    background-color: #fbfbfbca;
+    height: 100px;
+    width: 100px;
+    top: var(--cursorY);
+    left: var(--cursorX);
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 30px;
+    line-height: 100%;
+    text-align: center;
+}
+
+
+.popup {
+    height: 60px;
+    position: fixed;
+    background-color: #ffffffbb;
+    width: fit-content;
+    border-radius: 4px;
+    z-index: 10;
+    padding: 17px 30px;
+    text-align: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup-active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 30px;
+    transition: bottom 0.2s;
+}

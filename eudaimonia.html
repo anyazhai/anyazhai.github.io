@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./projects.css">
+    <title>Chaithanya S - Eudaimonia</title>
+</head>
+
+
+<body>
+    <div class="eud-hero">
+        <img class="eud-bg" src="./images/eudaimonia-bg.png">
+        <div class="links">
+            <a  href="https://github.com/Diptonil/eudaimonia" target="_blank">GitHub</a>
+        </div>
+        <h1 id="hero-text">
+            Eudaimonia
+        </h1>
+        <p>A Journaling website as a step towards mental healthcare</p>
+
+        <div class="right-float">
+            <h4>UI/UX Design & Prototyping - <span class="color-change">Figma, Krita</span></h4>
+            <h4>Front-end Development - <span class="color-change">Vanilla JS</span></h4>
+        </div>
+        
+    </div>
+
+    <div class="flex prob-sol">
+        <div id="prob">
+            <h4>The <span class="color-change">Problem</span></h4>
+            <p>Frequent burnouts in adults with work-loads and teenagers trying to balance different things in their lives.</p>
+        </div>
+
+        <div id="sol">
+            <h4>The <span class="color-change">Goal</span></h4>
+            <p>To create a platform where people can express themselves and get clarity on what they are feeling.</p>
+        </div>
+    </div>
+
+    <div class="Users">
+        <h2>
+            Understanding the Users
+        </h2>
+
+        <div class="flex">
+            <div class="research">
+                <h4>User <span class="color-change">Research</span></h4>
+                <p>Interviews were conducted and empathy maps were drawn based on it.</p>
+                <p>A primary user group identified through the research was teenagers and adults in their early twenties to late thirties. The research also revealed that a convenient way to access the application through their mobile phones, at any time, was needed.</p>
+            </div>
+    
+            <div class="structure">
+                <h4>The <span class="color-change">Structure</span> of User Research</h4>
+                <p>Potential users were asked a bunch of pre-thought questions, extrapolating it with occasional follow-up questions. The patterns observed in their answers highly influenced the overall design process. With these patterns in mind, user personas were created along with user journey maps to get a better understanding of what could be included as a feature in our journaling website.</p>
+                <p>Furthermore, through competitive audit, we were able to understand what the market already offers and what more can be offered to meet the user expectations.</p>
+                <p>All the learning led us to understand and point out the major user pain points.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="challenge">
+        <h4><span class="color-change">Challenges</span> Faced</h4>
+
+        <div class="flex">
+            <div class="flex challenge-item">
+                <img class="pointy" src="./images/poniter.svg">
+                <p>
+                    Lack of motivation in users to journal daily
+                </p>
+            </div>
+
+            <div class="flex challenge-item">
+                <img class="pointy" src="./images/poniter.svg">
+                <p>
+                    User preference on traditional journaling medium
+                </p>
+            </div>
+        </div>
+
+        <div class="flex challenge-item">
+            <img class="pointy"src="./images/poniter.svg">
+            <p>
+                Efficient Organization of all the different features
+            </p>
+        </div>
+    </div>
+
+    <div class="design">
+        <h2>Starting with the Design</h2>
+
+        <section class="IA">
+            <h4><span class="color-change">Information Architecture</span>/User Flow</h4>
+            <img src="./images/eud-IA.png" alt="information architecture">
+        </section>
+
+        <section class="pattern">
+            <h4><span class="color-change">Pattern</span> Library</h4>
+            <p>Since many of our users were used to physical books for journaling, we wanted to keep the theme as close to the physical book's look and feel as possible. A calming theme was chosen for the overall design and based on all these considerations these were the choices made:</p>
+
+            <img src="./images/pattern-library.png" alt="patter library">
+        </section>
+
+        <section class="UI-ss">
+            <h4>High-fidelity<span class="color-change"> UI Design</span></h4>
+
+            <img src="./images/eud-ui.png" alt="UI screens">
+        </section>
+        
+    </div>
+
+    <div class="popup">
+        <p>Copied to clipboard! </p> </div>
+    <footer class="footer">
+        
+        <div class="contact">
+            <p class="contact-text">Have a project idea in mind and would like to share it? Feel free to <span class="italic">email me. </span></p>
+
+            <input type="text" id="copy-text" value="chaithanyachaithanya2708@gmail.com" readonly>
+            <div class="btn-secondary copy" onclick="copyText()">Copy</div>
+            <p id="copyright">
+                Designed and Developed by Chaithanya S <br>
+                &copy; 2022 All Rights Reserved.
+            </p>
+        </div>
+        <div class="drawing-board">
+            <canvas id="drawing-board">
+            </canvas>
+            <div id="toolbar">
+                <p>Leave your magical imprint here. :)</p>
+                <button class="btn-secondary" id="clear" onclick="clear()">Clear</button>
+            </div>
+            <div class="drag" id="drag">
+                Click & Drag
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        //Copying text to clipboard
+        function copyText() {
+        var copyText = document.getElementById("copy-text");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        var popup = document.querySelector('.popup');
+            popup.classList.add('popup-active');
+            setTimeout(() => {
+                popup.classList.remove('popup-active')
+            }, 3000);
+        
+        }
+
+        //Drawing board
+        window.addEventListener('load', () => {
+            const canvas = document.querySelector('#drawing-board');
+            const toolbar = document.getElementById('toolbar')
+            const c = canvas.getContext('2d');
+            const drag =  document.querySelector('.drag');
+            canvas.width = 800;
+            canvas.height = 400;
+            canvas.style.background = "#180021"
+            let painting = false;
+
+
+            toolbar.addEventListener('click', e =>{
+                if(e.target.id === 'clear')
+                    c.clearRect(0, 0, canvas.width, canvas.height)
+            })
+
+            function draw(e){
+                if(!painting){
+                    return;
+                } 
+                else{
+                    c.lineWidth = 3;
+                    c.lineCap = 'round';
+                    drag.style.display = "none";
+                    c.strokeStyle = 'white'
+
+                    c.lineTo(e.offsetX, e.offsetY);
+                    c.stroke();
+                }
+                
+            }
+
+            canvas.addEventListener('mousedown', (e) => {
+                painting = true;
+            });
+            canvas.addEventListener('mouseup', (e) => {
+                painting = false;
+                c.stroke();
+                c.beginPath()
+            });
+            canvas.addEventListener('mousemove', draw);
+        })
+
+
+        //coursor thing on the drawing pane
+        const drag = document.getElementById('drag');
+        const parent_div = document.getElementById('drawing-board');
+        parent_div.addEventListener("mousemove", evt => {
+        const mouseX = evt.offsetX + 'px';
+        const mouseY = evt.offsetY + 'px';
+        const root = document.documentElement;
+        setTimeout(() => {
+            root.style.setProperty('--cursorX', mouseX);
+            root.style.setProperty('--cursorY', mouseY);
+        }, 160);
+        });
+
+        
+    </script>
+</body>
+</html>

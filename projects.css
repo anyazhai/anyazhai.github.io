@@ -1,0 +1,154 @@
+body{
+    background-color: #FEFAFF;
+}
+
+
+a{
+    cursor: pointer;
+    position: relative;
+    color: var(--accent-blue);
+    /* font-style: italic; */
+    font-size: 20px;
+    font-weight: 550;
+    transition: all 0.5s ease;
+    padding-right: 20px;
+}
+
+a::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: var(--accent-blue);
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.links{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.eud-hero{
+    margin-top: 0px;
+}
+
+.eud-hero p{
+    text-align: center;
+}
+
+
+p{
+    margin-bottom: 15px;
+}
+
+.eud-bg{
+    z-index: -10;
+    position: absolute;
+    top:0;
+
+}
+
+.eud-hero #hero-text{
+    max-width: fit-content;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.right-float{
+    padding-top: 150px;
+    float: right;
+    margin: 20px;
+}
+
+.right-float h4{
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.flex{
+    display: flex;
+}
+
+.prob-sol{
+    margin: 200px 100px;
+    margin-top: 400px;
+}
+
+#prob{
+    width: 600px;
+}
+
+#sol{
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: 150px;
+}
+
+.Users{
+    margin: 100px;
+}
+
+.research{
+    margin-top: 50px;
+}
+
+.research p{
+    width: 550px;
+}
+
+.structure{
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.structure p{
+    width: 550px;
+}
+
+.challenge{
+    margin: 100px;
+    margin-left: 150px;
+}
+
+.challenge-item{
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.challenge-item p{
+    max-width: 400px;
+    margin-top: 15px;
+}
+
+.pointy{
+    width: 90px;
+    margin-right: 30px;
+}
+
+
+.design{
+    margin: 100px;
+    margin-top: 150px;
+}
+
+.IA{
+    margin-top: 60px;
+}
+
+.pattern{
+    margin-top: 100px;
+}
+
+.UI-ss{
+    margin-top: 60px;
+}

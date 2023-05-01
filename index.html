@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Chaithanya - portfolio</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="container-nav">
+            <div class="brand">
+                <h2>Chaithanya</h2>
+                <p>Designer & Developer</p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="" class="nav-item">Projects</a></li>
+                    <li><a href="" class="nav-item">Resume</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="" class="nav-contact">Get in touch</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="explore">
+        <h2>explore project</h2>
+    </div> -->
+
+        <div id="hero-section" class="one">
+            <h1 id="hero-text">
+                Creating <br> <span  class="wordgroup1 space1">designs</span><span  class="wordgroup2 space1">experiences</span><br>
+                <div class="space"> that <span  class="wordgroup1 color-change">speak.</span><span  class="wordgroup2 color-change stick">stick.</span></div>
+            </h1>
+            <img class="swiggly" src="./images/swiggly.svg"   >
+            <p class="hero-subtext">Leaving behind magical imprints of thoughts and ideas</p>
+            
+            </div>
+    
+    <section class="about" >
+        <div id="about-text">
+            <h4>
+                About  <span class="color-change">me</span>
+            </h4>
+            <p>I'm Chaithanya - a Designer, Developer and an artist. <br>
+                I aim to create meaningful identities that can weave their own stories. <br>
+Animals adore me and abstraction fascinates me. <br>
+When I'm not cursing myself over a bug or an ideation block, you can find me vibing to Taylor or wrapped safely inside the world of a book.</p>
+        </div>
+
+        <div id="services">
+            <h4>
+                I <span class="color-change">can </span>help you with
+            </h4>
+            <p>Front-end development | UI & UX </p>
+        </div>
+    </section>
+
+    <div id="works">
+        <div class="flex">
+            <div class="eudaimonia">
+                <div class="image">
+                    <img onmouseover="exploreCursor(this)" onmouseleave="exploreLeave(this)" src="./images/eudaimonia.png" alt="" onclick="location.href = './eudaimonia.html'">
+                </div>
+                <h3>Eudaimonia - a journaling website</h3>
+                <h4>UI/UX Design | Front-end Development</h4>
+            </div>
+            <div class="alliswell">
+                <div class="image">
+                    <img onmouseover="exploreCursor(this)" onmouseleave="exploreLeave(this)" src="./images/alliswell.png" alt="" onclick="location.href = './eudaimonia.html'">
+                </div>
+                <h3>All is Well</h3>
+                <h4>UI/UX Design</h4>
+            </div>
+        </div>
+
+        <div class="flex bottom">
+            <div class="tuitionhai">
+                <div class="image">
+                    <img onmouseover="exploreCursor(this)" onmouseleave="exploreLeave(this)" src="./images/tuitionhai.png" alt="" onclick="location.href = './eudaimonia.html'">
+                </div>
+                <h3>TuitionHai</h3>
+                <h4>UI/UX Design | Front-end Development</h4>
+            </div>
+            <div class="art">
+                <div class="image">
+                    <img onmouseover="exploreCursor(this)" onmouseleave="exploreLeave(this)" src="./images/art.png" alt="" onclick="location.href = './eudaimonia.html'">
+                </div>
+                <h3>Illustrations & Sketches</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="process">
+        <h4>
+            The story <span class="color-change">behind </span>the stories
+        </h4>
+        <p>Research - Ideate - Design - Prototype - Code - Test - Repeat</p>
+
+        <br> <br>
+        <h4>
+            The <span class="color-change">real </span>story behind the stories
+        </h4>
+        <p>Analyse. Research. Notes. Sleep. Ideas. Dumb ideas. Silly ideas. Ideation block. Coffee. No Sleep. Cute annoyed face. Songs and Dogs. Magical Idea. Design. No satissfaction. Discussion. Idea to build on idea.  More Coffee. Code. Tremondous bugs. More Code. Desired look. Satisfaction. Magic. <br>
+            And maybe not even in exact order
+        *cries and laughs*</p>
+    </div> -->
+
+    <div class="popup">
+        <p>Copied to clipboard! </p> </div>
+    <footer class="footer">
+        
+        <div class="contact">
+            <p class="contact-text">Have a project idea in mind and would like to share it? Feel free to <span class="italic">email me. </span></p>
+
+            <input type="text" id="copy-text" value="chaithanyachaithanya2708@gmail.com" readonly>
+            <div class="btn-secondary copy" onclick="copyText()">Copy</div>
+            <p id="copyright">
+                Designed and Developed by Chaithanya S <br>
+                &copy; 2022 All Rights Reserved.
+            </p>
+        </div>
+        <div class="drawing-board">
+            <canvas id="drawing-board">
+            </canvas>
+            <div id="toolbar">
+                <p>Leave your magical imprint here. :)</p>
+                <button class="btn-secondary" id="clear" onclick="clear()">Clear</button>
+            </div>
+            <div class="drag" id="drag">
+                Click & Drag
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const explore = document.getElementById('explore')
+        function exploreCursor(e){
+            // document.documentElement.addEventListener("scroll", event => {
+            //     curY = scrollY + 'px'
+            //     setTimeout(() => {
+            //         root.style.setProperty('--exploreY', curY);
+            //     }, 180);
+            // })
+            e.addEventListener("mousemove", evt => {
+            let curX = evt.pageX + 'px';
+            let curY = evt.pageY + 'px';
+            const root = document.documentElement;
+            explore.style.setProperty('display', 'inline-block');
+            setTimeout(() => {
+                root.style.setProperty('--exploreX', curX);
+                root.style.setProperty('--exploreY', curY);
+            }, 180);
+            });
+        }
+
+        function exploreLeave(e){
+            explore.style.setProperty('display', 'none');
+        }
+
+        //Copying text to clipboard
+        function copyText() {
+        var copyText = document.getElementById("copy-text");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        var popup = document.querySelector('.popup');
+            popup.classList.add('popup-active');
+            setTimeout(() => {
+                popup.classList.remove('popup-active')
+            }, 3000);
+        
+        }
+
+        //Drawing board
+        window.addEventListener('load', () => {
+            const canvas = document.querySelector('#drawing-board');
+            const toolbar = document.getElementById('toolbar')
+            const c = canvas.getContext('2d');
+            const drag =  document.querySelector('.drag');
+            canvas.width = 800;
+            canvas.height = 400;
+            canvas.style.background = "#180021"
+            let painting = false;
+
+
+            toolbar.addEventListener('click', e =>{
+                if(e.target.id === 'clear')
+                    c.clearRect(0, 0, canvas.width, canvas.height)
+            })
+
+            function draw(e){
+                if(!painting){
+                    return;
+                } 
+                else{
+                    c.lineWidth = 3;
+                    c.lineCap = 'round';
+                    drag.style.display = "none";
+                    c.strokeStyle = 'white'
+
+                    c.lineTo(e.offsetX, e.offsetY);
+                    c.stroke();
+                }
+                
+            }
+
+            canvas.addEventListener('mousedown', (e) => {
+                painting = true;
+            });
+            canvas.addEventListener('mouseup', (e) => {
+                painting = false;
+                c.stroke();
+                c.beginPath()
+            });
+            canvas.addEventListener('mousemove', draw);
+        })
+
+
+        //coursor thing on the drawing pane
+        const drag = document.getElementById('drag');
+        const parent_div = document.getElementById('drawing-board');
+        parent_div.addEventListener("mousemove", evt => {
+        const mouseX = evt.offsetX + 'px';
+        const mouseY = evt.offsetY + 'px';
+        const root = document.documentElement;
+        setTimeout(() => {
+            root.style.setProperty('--cursorX', mouseX);
+            root.style.setProperty('--cursorY', mouseY);
+        }, 160);
+        });
+
+        
+    </script>
+</body>
+</html>
