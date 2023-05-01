@@ -34,8 +34,13 @@ a:hover::after{
 
 .links{
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 30px;
+    text-align: right;
+}
+
+.links a{
+    font-size: 18px;
 }
 
 .eud-hero{
@@ -51,7 +56,7 @@ p{
     margin-bottom: 15px;
 }
 
-.eud-bg{
+.eud-bg, .aiw-bg{
     z-index: -10;
     position: absolute;
     top:0;
@@ -64,6 +69,19 @@ p{
     margin-top: 200px;
 }
 
+.aiw-hero #hero-text{
+    /* margin-left: 55vw; */
+    text-align: right;
+    margin-top: 250px;
+    margin-right: 50px;
+    margin-bottom: 0;
+}
+
+.aiw-hero p{
+    text-align: right;
+    margin-right: 50px;
+}
+
 .right-float{
     padding-top: 150px;
     float: right;
@@ -72,6 +90,7 @@ p{
 
 .right-float h4{
     text-align: right;
+    margin-right: 30px;
     margin-bottom: 10px;
 }
 
@@ -152,3 +171,35 @@ p{
 .UI-ss{
     margin-top: 60px;
 }
+
+.aiw-section{
+    margin: 100px;
+    margin-top: 450px;
+}
+
+.aiw-section .role{
+    max-width: 500px;
+}
+
+.aiw-section .research{
+    margin-left: 250px;
+}
+
+.bullet{
+    margin-bottom: 7px;
+}
+
+.aiw-ui h4{
+    margin-left: 100px;
+    margin-bottom: 0;
+}
+
+.aiw-ui{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.links p{
+    font-size: 16px;
+}
+

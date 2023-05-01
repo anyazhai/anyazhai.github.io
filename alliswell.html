@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./projects.css">
+    <title>Chaithanya S - Eudaimonia</title>
+</head>
+
+
+<body>
+    <div class="aiw-hero">
+        <img class="aiw-bg" src="./images/aiw-bg.png">
+        <div class="links">
+            <a  href="https://www.figma.com/proto/gVvzgBKghTXoWVRVKLUYfw/All-is-Well?node-id=472-70&scaling=scale-down&page-id=0%3A1&starting-point-node-id=472%3A70&show-proto-sidebar=1" target="_blank">Run Prototype</a> <br>
+            <a href="https://play.google.com/store/apps/details?id=com.aiw.app" target="_blank">View app on Playstore</a><br>
+            <a href="https://www.alliswell.in/" target="_blank">Visit Website</a>
+        </div>
+        <h1 id="hero-text">
+            All is Well
+        </h1>
+        <p>Integrated fitness app to unlock sports performancs</p>
+
+        <div class="right-float">
+            <h4>UI/UX Design & Prototyping - <span class="color-change">Figma</span></h4>
+        </div>
+        
+    </div>  
+
+    <div class="aiw-section">
+
+        <div class="flex">
+            <div class="role">
+                <h4>My <span class="color-change">Role</span></h4>
+                <p>Design and prototype of the mobile app for coaches and athletes</p>
+                <p>Complete design of the Website</p>
+                <p>Iterating on the design process to redesign the application  based on the user feedback</p>
+            </div>
+    
+            <div class="research">
+                <h4>User <span class="color-change">Research</span></h4>
+                <p>Coaches and athletes are the target group of the product. </p>
+                <p>User personas were drawn up to understand the user. Major user pain point noticed was the lack of time that both the athletes and coaches had. This pain point was strongly considered throughout the design process.</p>
+                <p>In response to the user research, </p>
+                    <p class="bullet"> - Color coded scores</p>
+                    <p class="bullet"> - Visual representation of data</p>
+                </li>
+                <p>were incorporated in the design to enable easy glace through of large amount of data</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="aiw-ui">
+        <h4>Some<span class="color-change"> Mockups</span></h4>
+
+        <img src="./images/aiw-ui.png" alt="UI screens">
+    </section>
+
+    <div class="popup">
+        <p>Copied to clipboard! </p> </div>
+    <footer class="footer">
+        
+        <div class="contact">
+            <p class="contact-text">Have a project idea in mind and would like to share it? Feel free to <span class="italic">email me. </span></p>
+
+            <input type="text" id="copy-text" value="chaithanyachaithanya2708@gmail.com" readonly>
+            <div class="btn-secondary copy" onclick="copyText()">Copy</div>
+            <p id="copyright">
+                Designed and Developed by Chaithanya S <br>
+                &copy; 2022 All Rights Reserved.
+            </p>
+        </div>
+        <div class="drawing-board">
+            <canvas id="drawing-board">
+            </canvas>
+            <div id="toolbar">
+                <p>Leave your magical imprint here. :)</p>
+                <button class="btn-secondary" id="clear" onclick="clear()">Clear</button>
+            </div>
+            <div class="drag" id="drag">
+                Click & Drag
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        //Copying text to clipboard
+        function copyText() {
+        var copyText = document.getElementById("copy-text");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        var popup = document.querySelector('.popup');
+            popup.classList.add('popup-active');
+            setTimeout(() => {
+                popup.classList.remove('popup-active')
+            }, 3000);
+        
+        }
+
+        //Drawing board
+        window.addEventListener('load', () => {
+            const canvas = document.querySelector('#drawing-board');
+            const toolbar = document.getElementById('toolbar')
+            const c = canvas.getContext('2d');
+            const drag =  document.querySelector('.drag');
+            canvas.width = 800;
+            canvas.height = 400;
+            canvas.style.background = "#180021"
+            let painting = false;
+
+
+            toolbar.addEventListener('click', e =>{
+                if(e.target.id === 'clear')
+                    c.clearRect(0, 0, canvas.width, canvas.height)
+            })
+
+            function draw(e){
+                if(!painting){
+                    return;
+                } 
+                else{
+                    c.lineWidth = 3;
+                    c.lineCap = 'round';
+                    drag.style.display = "none";
+                    c.strokeStyle = 'white'
+
+                    c.lineTo(e.offsetX, e.offsetY);
+                    c.stroke();
+                }
+                
+            }
+
+            canvas.addEventListener('mousedown', (e) => {
+                painting = true;
+            });
+            canvas.addEventListener('mouseup', (e) => {
+                painting = false;
+                c.stroke();
+                c.beginPath()
+            });
+            canvas.addEventListener('mousemove', draw);
+        })
+
+
+        //coursor thing on the drawing pane
+        const drag = document.getElementById('drag');
+        const parent_div = document.getElementById('drawing-board');
+        parent_div.addEventListener("mousemove", evt => {
+        const mouseX = evt.offsetX + 'px';
+        const mouseY = evt.offsetY + 'px';
+        const root = document.documentElement;
+        setTimeout(() => {
+            root.style.setProperty('--cursorX', mouseX);
+            root.style.setProperty('--cursorY', mouseY);
+        }, 160);
+        });
+
+        
+    </script>
+</body>
+</html>

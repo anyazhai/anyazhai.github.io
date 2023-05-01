@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./gallery.css">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <section class="gallery">
+        <img class="image" src="./images/art/astronaut.png" alt="image" />
+
+        <img class="image" src="./images/art/adrift.png" alt="image" />
+
+        <img class="image" src="./images/art/blue-lady.png" alt="image" />
+
+        <img class="image" src="./images/art/by-the-waters.png" alt="image" />
+
+        <img class="image" src="./images/art/female.png" alt="image" />
+
+        <img class="image" src="./images/art/floral.png" alt="image" />
+
+        <img class="image" src="./images/art/ivy.png" alt="image" />
+
+        <img class="image" src="./images/art/lone-lark.png" alt="image" />
+
+        <img class="image" src="./images/art/mountain.png" alt="image" />
+        
+        <img class="image" src="./images/art/painter.png" alt="image" />
+
+        <img class="image" src="./images/art/pencilgirl.png" alt="image" />
+
+        <img class="image" src="./images/art/picassopablo.png" alt="image" />
+
+        <img class="image" src="./images/art/red-lady.png" alt="image" />
+
+        <img class="image" src="./images/art/regrets.jpg" alt="image" />
+        
+        <img class="image" src="./images/art/senses.png" alt="image" />
+
+        <img class="image" src="./images/art/taylor-swift.png" alt="image" />
+
+        <img class="image" src="./images/art/the-son.png" alt="image" />
+
+        <img class="image" src="./images/art/to-fly.png" alt="image" />
+
+        <img class="image" src="./images/art/To-the-other-side.png" alt="image" />
+
+    </section>
+
+
+
+
+    <!-- <div class="lightbox">
+        <span class="close pointer">&times;</span>
+        <a class="previous" onclick="">&#10094;</a>
+        <a class="next" onclick="">&#10095;</a>
+    </div> -->
+
+    <!-- <script>
+        const lightbox = document.createElement("div")
+        lightbox.className = 'lightbox'
+        document.body.appendChild(lightbox)
+
+        const images = Array.from(document.querySelectorAll('.image'))
+        const next = document.querySelector('.next')
+        const previous = document.querySelector('.previous')
+        const cls = document.querySelector('.close')
+
+        images.forEach(image => {
+            image.addEventListener('click', e => {
+                lightbox.classList.add('active')
+                const img = document.createElement('img')
+                img.src = image.src
+                while(lightbox.firstChild){
+                    lightbox.removeChild(lightbox.firstChild)
+                }
+                lightbox.appendChild(img)
+                img.style.height = '100%'
+                img.style.width ='auto'
+                
+            })
+        })
+
+        lightbox.addEventListener('click', e => {
+            if(e.target !== e.currentTarget) 
+                return
+            lightbox.classList.remove('active')
+        })
+    </script> -->
+</body>
+</html>
