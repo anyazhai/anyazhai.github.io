@@ -30,14 +30,14 @@ h1, h2, h3{
 }
 
 h2{
-    font-size: 36px;
+    font-size: 2.1rem;
 }
 
 h4{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 117.5%;
     letter-spacing: -0.045em;
     color: rgba(0, 0, 0, 0.53);
@@ -48,7 +48,7 @@ p{
     font-family: 'Merriweather';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.3rem;
     line-height: 121.5%;
     letter-spacing: -0.045em;
     color: rgba(0, 0, 0, 0.71);
@@ -122,14 +122,14 @@ li{
     font-weight: 550;
     transition: all 0.5s ease;
     color: #23192395;
-    font-size: 1vw;
+    font-size: 1rem;
 }
 
 .nav-contact{
     position: relative;
     color: var(--accent-blue);
     /* font-style: italic; */
-    font-size: 1.4vw;
+    font-size: 1.4rem;
     font-weight: 550;
     transition: all 0.5s ease;
     padding-right: 20px;
@@ -189,12 +189,12 @@ li{
 }
 
 .brand h2{
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 20px;
 }
 
 .brand p{
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #000000be;
 }
 
@@ -227,7 +227,7 @@ li{
     margin-top: 200px;
     margin-left: 21vw;
     width: 240px;
-    font-size: 1vw;
+    font-size: 1rem;
     color: #00000083;
 }
 
@@ -413,7 +413,7 @@ li{
 }
 
 .contact-text{
-    font-size: 20px;
+    font-size: 1.2rem;
     max-width: 20vw;
 }
 
@@ -449,7 +449,7 @@ li{
     resize: none;
     height: fit-content;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 1.1rem;
     background-color: #ffffff2f;
     border: none;
     width: 410px;
@@ -468,7 +468,7 @@ li{
 
 #copyright{
     margin-top: 110px;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #ffffff7e;
 }
 
@@ -525,3 +525,20 @@ li{
     bottom: 30px;
     transition: bottom 0.2s;
 }
+
+@media screen and (max-width: 700px) {
+    html{
+        font-size: 12px;
+    }
+
+    .about{
+        margin: 20px;
+        display: block;
+        max-width: 450px;
+    }
+
+    #works .flex{
+        display: block;
+        margin-bottom: 30px;
+    }
+  }
