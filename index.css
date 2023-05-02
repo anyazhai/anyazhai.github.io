@@ -538,8 +538,17 @@ li{
         font-size: 12px;
     }
 
+    .nav-bar{
+        width: 100vw;
+    }
+
+    .container-nav{
+        margin: 10px;
+    }
+
     body{
         width: 100vw;
+        overflow-x: hidden;
     }
 
     h4{
@@ -575,7 +584,7 @@ li{
     .about{
         margin: 20px;
         display: block;
-        max-width: 450px;
+        max-width: 95vw;
     }
 
     #works .flex{
@@ -614,6 +623,15 @@ li{
 
     .drawing-board{
         display: none;
+    }
+
+    .contact{
+        width: 95vw;
+        padding: 10px;
+    }
+
+    #copy-text{
+        width: 85vw;
     }
 
     .contact-text{
