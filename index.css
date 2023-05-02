@@ -538,6 +538,10 @@ li{
         font-size: 12px;
     }
 
+    body{
+        width: 100vw;
+    }
+
     h4{
         margin-bottom: 15px;
     }
@@ -558,6 +562,10 @@ li{
     /* #hero-section{
         height: fit-content;
     } */
+
+    .swiggly{
+        display: none;
+    }
 
     #hero-text{
         margin-top: 15vh;
@@ -581,7 +589,7 @@ li{
     }
 
     #services p{
-        width: 450px;
+        max-width: 95vw;
     }
 
     #works{
@@ -591,7 +599,7 @@ li{
     .eudaimonia, .alliswell, .tuitionhai, .art{
         margin: 0;
         padding-top: 40px;
-        max-width: 450px;
+        max-width: 95vw;
         margin:auto;
     }
 
