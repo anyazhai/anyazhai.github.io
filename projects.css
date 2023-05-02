@@ -203,3 +203,102 @@ p{
     font-size: 16px;
 }
 
+@media screen and (max-width: 700px) {
+    html{
+        font-size: 12px;
+    }
+
+    .flex{
+        display: block;
+    }
+
+    p{
+        margin-bottom: 10px;
+    }
+
+    .research, .structure{
+        margin: 0;
+    }
+
+    .eud-hero #hero-text{
+        margin-top: 150px;
+    }
+    
+    .aiw-hero #hero-text{
+        margin-top: 150px;
+    }
+
+    .right-float{
+        padding-top: 50px;
+    }
+
+    .prob-sol{
+        margin: 20px;
+        margin-top: 200px;
+    }
+
+    #sol{
+        margin: 0;
+        margin-top: 50px
+    }
+
+    .Users{
+        margin: 20px;
+        margin-top: 70px;
+    }
+
+    .Users h2{
+        margin-bottom: 25px;
+    }
+
+    .structure{
+        margin-top: 50px;
+    }
+
+    .challenge{
+        margin: 20px;
+        margin-top: 50px;
+    }
+
+    .pointy{
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .challenge-item{
+        margin-top: 20px;
+        display: flex;
+    }
+
+    .design{
+        margin: 20px;
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+
+    .aiw-section .role, .aiw-section .research{
+        margin: 0;
+    }
+
+    .aiw-section .role{
+        margin-bottom: 50px;
+    }
+
+    .aiw-section{
+        margin: 20px;
+        margin-top: 170px;
+    }
+
+    .aiw-ui h4{
+        margin-left: 20px;
+    }
+
+    .links a{
+        font-size: 1rem;
+    }
+
+    .links p{
+        font-size: 0.9rem;
+    }
+    
+}

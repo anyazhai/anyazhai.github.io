@@ -467,7 +467,7 @@ li{
 }
 
 #copyright{
-    margin-top: 110px;
+    margin-top: 80px;
     font-size: 0.9rem;
     color: #ffffff7e;
 }
@@ -526,9 +526,42 @@ li{
     transition: bottom 0.2s;
 }
 
+.icon{
+    width: 30px;
+    margin-top: 30px;
+    margin-right: 10px ;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 700px) {
     html{
         font-size: 12px;
+    }
+
+    h4{
+        margin-bottom: 15px;
+    }
+
+    .nav-item, .nav-contact{
+        display: none;
+    }
+
+    #resume{
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    .hero-subtext{
+        display: none;
+    }
+
+    /* #hero-section{
+        height: fit-content;
+    } */
+
+    #hero-text{
+        margin-top: 15vh;
+        margin-bottom: 10vh;
     }
 
     .about{
@@ -540,5 +573,46 @@ li{
     #works .flex{
         display: block;
         margin-bottom: 30px;
+    }
+
+    #services{
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    #services p{
+        width: 450px;
+    }
+
+    #works{
+        margin-top: 50px;
+    }
+
+    .eudaimonia, .alliswell, .tuitionhai, .art{
+        margin: 0;
+        padding-top: 40px;
+        max-width: 450px;
+        margin:auto;
+    }
+
+    .eudaimonia h4, .alliswell h4, .tuitionhai h4, .art h4{
+        font-size: 1rem;
+    }
+
+    #works .bottom{
+        margin: 0;
+        margin-bottom: 100px;
+    }
+
+    .drawing-board{
+        display: none;
+    }
+
+    .contact-text{
+        max-width: fit-content;
+    }
+
+    .copy{
+        display: none;
     }
   }
