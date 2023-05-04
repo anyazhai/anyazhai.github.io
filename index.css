@@ -538,6 +538,15 @@ li{
         font-size: 12px;
     }
 
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative
+    }
+
     .nav-bar{
         width: 100vw;
     }

@@ -260,6 +260,10 @@ p{
         margin-top: 50px;
     }
 
+    .structure p, .design p, .research p, #prob p, #sol p{
+        max-width: 90vw;
+    }
+
     .pointy{
         width: 40px;
         margin-right: 10px;
@@ -276,10 +280,32 @@ p{
         margin-bottom: 100px;
     }
 
+    .aiw-hero #hero-text, .aiw-hero p{
+        margin-right: 20px;
+    } 
+
+    .aiw-hero p{
+        max-width: 70vw;
+        float: right;
+    }
+
+    .links{
+        right: 10px;
+    }
+
+    .right-float {
+        margin: 0px;
+        margin-top: 50px;
+        padding: 0px;
+    }
+
     .aiw-section .role, .aiw-section .research{
         margin: 0;
     }
 
+    .aiw-section .role p, .aiw-section .research p{
+        max-width: 90vw;
+    }
     .aiw-section .role{
         margin-bottom: 50px;
     }
